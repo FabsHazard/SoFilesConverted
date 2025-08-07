@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="20dp" android:width="20dp" android:viewportWidth="20" android:viewportHeight="20">
+    <path android:fillColor="@drawable/$ic_history_uncheck__0" android:pathData="M10,3L10,3A7,7 0,0 1,17 10L17,10A7,7 0,0 1,10 17L10,17A7,7 0,0 1,3 10L3,10A7,7 0,0 1,10 3z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillType="1"/>
+    <path android:fillColor="#00000000" android:pathData="M10,10m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" android:strokeColor="?attr/mainTabIconColor" android:strokeWidth="2" android:fillType="1"/>
+    <path android:fillColor="?attr/mainTabIconColor" android:pathData="M11,5L11,7C11,7.552 10.552,8 10,8C9.448,8 9,7.552 9,7L9,5C9,4.448 9.448,4 10,4C10.552,4 11,4.448 11,5Z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillType="1"/>
+    <path android:fillColor="?attr/mainTabIconColor" android:pathData="M13,9L15,9C15.552,9 16,9.448 16,10C16,10.552 15.552,11 15,11L13,11C12.448,11 12,10.552 12,10C12,9.448 12.448,9 13,9Z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillType="1"/>
+    <path android:fillColor="?attr/mainTabIconColor" android:pathData="M10,9L10,9A1,1 0,0 1,11 10L11,10A1,1 0,0 1,10 11L10,11A1,1 0,0 1,9 10L9,10A1,1 0,0 1,10 9z" android:strokeColor="#00000000" android:strokeWidth="1" android:fillType="1"/>
+</vector>

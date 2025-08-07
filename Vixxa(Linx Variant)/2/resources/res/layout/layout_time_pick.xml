@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/time_picker_title_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16sp" android:textColor="@color/event_unit_color" android:id="@+id/tv_cancel" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/com_action_cancel" android:layout_centerVertical="true" android:paddingStart="15dp" android:paddingEnd="15dp" android:layout_marginStart="17dp" app:emojiCompatEnabled="false"/>
+        <TextView android:textSize="16sp" android:textColor="@color/black_33" android:id="@+id/tv_title" android:padding="5dp" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:emojiCompatEnabled="false"/>
+        <TextView android:textSize="16sp" android:textColor="@color/green_65" android:id="@+id/tv_finish" android:padding="5dp" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/com_action_sure" android:layout_centerVertical="true" android:paddingStart="15dp" android:paddingEnd="15dp" android:layout_marginEnd="17dp" android:layout_alignParentEnd="true" app:emojiCompatEnabled="false"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/timepicker" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="30dp" android:paddingEnd="30dp">
+        <com.contrarywind.view.WheelView android:id="@+id/year" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <com.contrarywind.view.WheelView android:id="@+id/month" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.1"/>
+        <com.contrarywind.view.WheelView android:id="@+id/day" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.1"/>
+        <com.contrarywind.view.WheelView android:id="@+id/hour" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.1"/>
+        <com.contrarywind.view.WheelView android:id="@+id/min" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.1"/>
+        <com.contrarywind.view.WheelView android:id="@+id/second" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.1"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="45dp"/>
+</LinearLayout>

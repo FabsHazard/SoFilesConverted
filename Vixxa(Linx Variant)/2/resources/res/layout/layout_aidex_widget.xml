@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/widget_root" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/iv_widget_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/bg_widget_white" android:layout_alignTop="@+id/llContainer" android:layout_alignBottom="@+id/llContainer" android:layout_centerVertical="true"/>
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/llContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/iv_logo" android:layout_width="90dp" android:layout_height="32dp" android:layout_marginTop="6dp" android:src="@drawable/ic_home_logo" android:layout_marginStart="16dp"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/iv_logo" android:layout_marginStart="16dp">
+            <TextView android:textSize="35sp" android:textStyle="bold" android:textColor="@color/black_33" android:id="@+id/widget_glucose_value" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/widget_trend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15dp"/>
+        </LinearLayout>
+        <TextView android:textSize="12sp" android:id="@+id/widget_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/ll_value" android:layout_marginStart="16dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="12dp" android:layout_below="@+id/widget_unit" android:layout_marginStart="16dp">
+            <TextView android:textSize="12sp" android:id="@+id/title_update_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/widget_updateTime"/>
+            <TextView android:textSize="14sp" android:id="@+id/widget_update_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

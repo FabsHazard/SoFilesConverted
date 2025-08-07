@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:paddingTop="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.google.android.flexbox.FlexboxLayout android:id="@+id/flItem" android:layout_width="match_parent" android:layout_height="wrap_content" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+        <TextView android:textSize="15sp" android:ellipsize="end" android:id="@+id/tvContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="150dp" android:includeFontPadding="false" app:emojiCompatEnabled="false"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/llDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="5dp">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/ivFoodCustom" android:layout_width="20dp" android:layout_height="wrap_content" android:src="0x7f080156" android:adjustViewBounds="true"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/ivFoodInputIcon" android:visibility="gone" android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/event_point" android:adjustViewBounds="true"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/ivFoodEdit" android:layout_width="19dp" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_right" android:adjustViewBounds="true" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+    </com.google.android.flexbox.FlexboxLayout>
+    <View android:background="@color/event_line" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="10dp"/>
+</LinearLayout>

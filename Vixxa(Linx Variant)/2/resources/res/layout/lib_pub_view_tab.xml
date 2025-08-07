@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <TextView android:textSize="16dp" android:textColor="@color/lib_pub_color_main" android:gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title" android:singleLine="true" android:layout_centerInParent="true" app:emojiCompatEnabled="false"/>
+    <TextView android:textSize="8dp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/tv_number" android:background="@drawable/lib_pub_circle_msg_number" android:visibility="gone" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginLeft="-1dp" android:layout_marginTop="-4dp" android:text="99" android:layout_toRightOf="@+id/tv_title" android:layout_alignTop="@+id/tv_title" app:emojiCompatEnabled="false"/>
+</merge>

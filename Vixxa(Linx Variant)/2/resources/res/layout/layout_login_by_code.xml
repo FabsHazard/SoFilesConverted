@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/layout_line"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatEditText android:textSize="16sp" android:id="@+id/et_code" android:background="?attr/bgColor" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/user_getCode" android:drawablePadding="10dp" android:layout_weight="2" android:inputType="number" android:drawableStart="@drawable/ic_ver_code" style="@style/MyEditText"/>
+        <TextView android:textSize="16sp" android:layout_gravity="center_vertical" android:id="@+id/btn_get_ver_code" android:background="?attr/bgColor" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/user_sign_getCode" android:layout_weight="1" app:emojiCompatEnabled="false" style="@style/btnLogin"/>
+    </LinearLayout>
+    <include layout="@layout/layout_line"/>
+    <LinearLayout android:gravity="center_vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+        <CheckBox android:theme="@style/LoginCheckBox" android:id="@+id/check_protocol" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.CompoundButton.RadioButton"/>
+        <TextView android:textSize="14sp" android:layout_gravity="center_vertical" android:id="@+id/txt_user_protocol" android:layout_width="wrap_content" android:layout_height="wrap_content" app:emojiCompatEnabled="false"/>
+    </LinearLayout>
+    <TextView android:textSize="14sp" android:textColor="#666" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="@string/user_sign_tip1" app:emojiCompatEnabled="false"/>
+</LinearLayout>

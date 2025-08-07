@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microtech.aidexx.views.ActionBarWidget android:id="@+id/action_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:actionBarTitleTextColor="@color/colorPrimary" app:leftIcon="@drawable/ic_back" app:titleText="@string/user_info"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="?attr/bgSetting" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" style="@style/baseMargin">
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siw_nickName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_info_nickname"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siw_height" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_info_height"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siw_weight" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="true" app:has_next="true" app:title="@string/user_info_weight"/>
+                <com.google.android.flexbox.FlexboxLayout android:id="@+id/fl_bmi" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_marginVertical="10dp" app:justifyContent="3">
+                    <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_bmi" android:layout_marginStart="25dp"/>
+                    <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:id="@+id/tvBmi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="33dp"/>
+                </com.google.android.flexbox.FlexboxLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="?attr/bgSetting" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" style="@style/baseMargin">
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siw_full_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_info_name"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siw_phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_phone"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siw_gender" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_info_gender"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siw_birth" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_info_birthday"/>
+                <com.google.android.flexbox.FlexboxLayout android:id="@+id/flAge" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" app:justifyContent="3">
+                    <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_age" android:layout_marginStart="25dp"/>
+                    <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:id="@+id/tvAge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="33dp"/>
+                </com.google.android.flexbox.FlexboxLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="?attr/bgSetting" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" style="@style/baseMargin">
+                <Space android:layout_width="match_parent" android:layout_height="6dp"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siw_diabetes" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="true" app:has_next="true" app:title="@string/user_info_diabetesType"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llDiabetesDetail" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.google.android.flexbox.FlexboxLayout android:id="@+id/flDiagnosis" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_marginVertical="10dp" app:justifyContent="3">
+                        <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_diseaseCourse" android:layout_marginStart="25dp"/>
+                        <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:ellipsize="end" android:id="@+id/tvDiagnosis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200dp" android:lines="1" android:layout_marginEnd="33dp"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <View android:background="?attr/dividerLine" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginHorizontal="20dp"/>
+                    <com.google.android.flexbox.FlexboxLayout android:id="@+id/flTreatment" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" app:justifyContent="3">
+                        <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_treatment" android:layout_marginStart="25dp"/>
+                        <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:ellipsize="end" android:gravity="end" android:id="@+id/tvTreatment" android:layout_width="180dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginEnd="33dp"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <View android:background="?attr/dividerLine" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginHorizontal="20dp"/>
+                    <com.google.android.flexbox.FlexboxLayout android:id="@+id/flComplications" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" app:justifyContent="3">
+                        <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_complications" android:layout_marginStart="25dp"/>
+                        <TextView android:textSize="16sp" android:textColor="?attr/colorDesc" android:ellipsize="end" android:gravity="end" android:id="@+id/tvComplications" android:layout_width="180dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginEnd="33dp"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <View android:background="?attr/dividerLine" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginHorizontal="20dp"/>
+                </LinearLayout>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/siwOtherDisease" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="false" app:has_next="true" app:title="@string/user_info_otherDisease"/>
+                <Space android:layout_width="match_parent" android:layout_height="6dp"/>
+            </LinearLayout>
+            <Space android:layout_width="match_parent" android:layout_height="40dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

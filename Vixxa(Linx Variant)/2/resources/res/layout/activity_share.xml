@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microtech.aidexx.views.ActionBarWidget android:id="@+id/action_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:leftIcon="@drawable/ic_back" app:titleText="@string/share"/>
+    <com.microtech.aidexx.views.tab.ScrollTab android:id="@+id/share_nav" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="50dp" app:lib_pub_stab_avag="true" app:lib_pub_stab_indicatorColor="@color/light_colorAccent" app:lib_pub_stab_indicatorPadding="37dp" app:lib_pub_stab_indicatorType="1" app:lib_pub_stab_indicatorWeight="3dp" app:lib_pub_stab_indicatorWidth="25dp" app:lib_pub_stab_type="0"/>
+    <FrameLayout android:id="@+id/frg_share" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="3dp"/>
+</LinearLayout>

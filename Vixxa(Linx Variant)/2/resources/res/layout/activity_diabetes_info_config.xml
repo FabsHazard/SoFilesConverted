@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microtech.aidexx.views.ActionBarWidget android:id="@+id/action_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:actionBarTitleTextColor="@color/colorPrimary" app:layout_constraintTop_toTopOf="0" app:leftIcon="@drawable/ic_back" app:titleText="@string/user_info_diabetesType">
+        <TextView android:textSize="18sp" android:textColor="?attr/appColorAccent" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tvSave" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/com_action_save" android:lines="1" android:maxEms="4" android:layout_marginEnd="8dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </com.microtech.aidexx.views.ActionBarWidget>
+    <com.flyco.roundview.RoundLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/action_bar" app:rv_cornerRadius="10dp" style="@style/baseMargin">
+        <com.flyco.roundview.RoundLinearLayout android:orientation="vertical" android:id="@+id/llType" android:layout_width="match_parent" android:layout_height="wrap_content" app:rv_backgroundColor="?attr/colorDialog" app:rv_cornerRadius="10dp">
+            <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:layout_marginRight="15dp" android:layout_marginBottom="15dp" android:layout_marginHorizontal="15dp" android:layout_marginVertical="15dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_diabetesType"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tvDiagnosisType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200dp" android:lines="1" app:drawableEndCompat="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.flyco.roundview.RoundLinearLayout>
+        <com.flyco.roundview.RoundLinearLayout android:orientation="vertical" android:id="@+id/llDiagnosisDate" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/llTitle" app:rv_backgroundColor="?attr/colorDialog" app:rv_cornerRadius="10dp">
+            <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:layout_marginRight="15dp" android:layout_marginBottom="15dp" android:layout_marginHorizontal="15dp" android:layout_marginVertical="15dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_diseaseCourse"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:gravity="center_vertical" android:id="@+id/tvDiagnosisDate" android:layout_width="wrap_content" android:layout_height="wrap_content" app:drawableEndCompat="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.flyco.roundview.RoundLinearLayout>
+        <com.flyco.roundview.RoundLinearLayout android:orientation="vertical" android:id="@+id/llTreat" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/llTitle" app:rv_backgroundColor="?attr/colorDialog" app:rv_cornerRadius="10dp">
+            <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:layout_marginRight="15dp" android:layout_marginBottom="15dp" android:layout_marginHorizontal="15dp" android:layout_marginVertical="15dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_treatment"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tvTreatment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200dp" android:lines="1" app:drawableEndCompat="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.flyco.roundview.RoundLinearLayout>
+        <com.flyco.roundview.RoundLinearLayout android:orientation="vertical" android:id="@+id/llComplications" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/llTitle" app:rv_backgroundColor="?attr/colorDialog" app:rv_cornerRadius="10dp">
+            <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:layout_marginRight="15dp" android:layout_marginBottom="15dp" android:layout_marginHorizontal="15dp" android:layout_marginVertical="15dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_complications"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tvComplications" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200dp" android:lines="1" app:drawableEndCompat="@drawable/ic_arrow_right"/>
+                </LinearLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.flyco.roundview.RoundLinearLayout>
+    </com.flyco.roundview.RoundLinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

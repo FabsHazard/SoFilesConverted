@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microtech.aidexx.views.ActionBarWidget android:id="@+id/action_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:actionBarTitleTextColor="@color/colorPrimary" app:leftIcon="@drawable/ic_back" app:titleText="@string/user_info">
+        <TextView android:textSize="18sp" android:textColor="?attr/appColorAccent" android:id="@+id/tvSave" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="0dp" android:text="@string/com_action_save" android:layout_marginEnd="8dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </com.microtech.aidexx.views.ActionBarWidget>
+    <TextView android:textColor="?attr/colorDesc" android:id="@+id/tvNotice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginStart="20dp"/>
+    <com.flyco.roundview.RoundLinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:layout_marginTop="10dp" android:layout_marginRight="13dp" android:layout_marginHorizontal="13dp" app:rv_backgroundColor="?attr/settingItemBackground" app:rv_cornerRadius="10dp">
+        <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:alignItems="2" app:justifyContent="3">
+            <EditText android:textSize="14sp" android:textColor="?attr/colorTitle" android:gravity="center_vertical" android:id="@+id/etInput" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:maxWidth="200dp" android:singleLine="true" android:includeFontPadding="false" android:maxLength="30"/>
+            <TextView android:textColor="?attr/colorDesc" android:id="@+id/tvInputCount" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginEnd="15dp"/>
+        </com.google.android.flexbox.FlexboxLayout>
+    </com.flyco.roundview.RoundLinearLayout>
+</LinearLayout>

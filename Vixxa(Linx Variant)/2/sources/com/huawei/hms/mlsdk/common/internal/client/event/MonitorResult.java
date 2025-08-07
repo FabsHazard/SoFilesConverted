@@ -1,0 +1,57 @@
+package com.huawei.hms.mlsdk.common.internal.client.event;
+
+public class MonitorResult {
+    public static final String SUCCESS = "SUCCESS";
+    public static final String ZOOM_NOT_SUPPORT = "ZOOM_NOT_SUPPORT";
+    private String code;
+    private Object data;
+    private String message;
+
+    public String getCode() {
+        return this.code;
+    }
+
+    public void setCode(String str) {
+        this.code = str;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public void setMessage(String str) {
+        this.message = str;
+    }
+
+    public Object getData() {
+        return this.data;
+    }
+
+    public void setData(Object obj) {
+        this.data = obj;
+    }
+
+    public static final MonitorResult ofSuccessResult() {
+        MonitorResult monitorResult = new MonitorResult();
+        monitorResult.setCode(SUCCESS);
+        monitorResult.setMessage((String) null);
+        monitorResult.setData((Object) null);
+        return monitorResult;
+    }
+
+    public static final MonitorResult ofFailureResult(String str) {
+        return ofFailureResult(str, (String) null, (Object) null);
+    }
+
+    public static final MonitorResult ofFailureResult(String str, String str2) {
+        return ofFailureResult(str, str2, (Object) null);
+    }
+
+    public static final MonitorResult ofFailureResult(String str, String str2, Object obj) {
+        MonitorResult monitorResult = new MonitorResult();
+        monitorResult.setCode(str);
+        monitorResult.setMessage(str2);
+        monitorResult.setData(obj);
+        return monitorResult;
+    }
+}

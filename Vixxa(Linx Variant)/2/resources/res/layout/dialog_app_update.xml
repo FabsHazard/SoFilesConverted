@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/shape_dialog_confirm" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/upgradeTop" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/ll_download" android:layout_alignParentTop="true">
+        <ImageView android:layout_gravity="center" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginTop="16dp" android:src="@mipmap/ic_home_launcher"/>
+        <TextView android:textSize="18sp" android:textStyle="bold" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="16dp" android:layout_marginRight="15dp" android:layout_marginBottom="10dp" android:textAlignment="center" app:emojiCompatEnabled="false"/>
+        <ScrollView android:id="@+id/sl_content" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tv_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:minHeight="120dp" android:lineSpacingExtra="2dp" app:emojiCompatEnabled="false"/>
+            </LinearLayout>
+        </ScrollView>
+        <TextView android:textSize="16sp" android:textColor="?attr/appColorAccent" android:gravity="center" android:layout_gravity="center" android:id="@+id/txt_update_progress" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="40dp" android:text="@string/app_download" app:emojiCompatEnabled="false"/>
+        <Space android:layout_width="match_parent" android:layout_height="12dp"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_download" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="16dp" android:layout_alignParentBottom="true">
+        <com.microtech.aidexx.views.button.StateButton android:id="@+id/bt_ok" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/version_update_sure" android:layout_above="@+id/button_old_sensor" android:layout_centerHorizontal="true" style="@style/StateButtonRaised"/>
+        <TextView android:gravity="center" android:id="@+id/bt_cancel" android:padding="12dp" android:paddingBottom="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:text="@string/version_update_ignore" android:layout_weight="1" app:emojiCompatEnabled="false" style="@style/btnDialog"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.flyco.roundview.RoundFrameLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:rv_backgroundColor="@color/bg_item_color" app:rv_cornerRadius="10dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                        <TextView android:textSize="14sp" android:textColor="@color/history_label" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_board_title_carb"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/history_label" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_board_title_protein"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/history_label" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_board_title_fat"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                        <TextView android:textColor="@color/history_count_text" android:gravity="center_horizontal" android:id="@+id/tvCarbohydrateWeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="140dp" android:minWidth="100dp"/>
+                        <TextView android:textColor="@color/history_count_text" android:gravity="center_horizontal" android:id="@+id/tvProteinWeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="140dp" android:minWidth="100dp"/>
+                        <TextView android:textColor="@color/history_count_text" android:gravity="center_horizontal" android:id="@+id/tvFatWeight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="140dp" android:minWidth="100dp"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                        <TextView android:textSize="14sp" android:textColor="@color/history_label" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_board_title_exercise"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/history_label" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_board_title_medicine"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/history_label" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_board_title_insulin"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                        <TextView android:textColor="@color/history_count_text" android:gravity="center_horizontal" android:id="@+id/tvExerciseTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp"/>
+                        <TextView android:textColor="@color/history_count_text" android:gravity="center_horizontal" android:id="@+id/tvMedicationTimes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp"/>
+                        <TextView android:textColor="@color/history_count_text" android:gravity="center_horizontal" android:id="@+id/tvInsulinDose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                </LinearLayout>
+            </com.flyco.roundview.RoundFrameLayout>
+            <com.flyco.roundview.RoundLinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:rv_backgroundColor="@color/bg_item_color" app:rv_cornerRadius="10dp">
+                <TextView android:textColor="@color/gray_d8" android:layout_gravity="left" android:id="@+id/tvGlucoseUnit" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginStart="20dp"/>
+                <com.microtech.aidexx.views.chart.GlucoseChart android:id="@+id/chart" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="2dp" android:layout_marginEnd="10dp"/>
+                <com.flyco.roundview.RoundFrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:rv_backgroundColor="#21bae4b6" app:rv_cornerRadius_BL="8dp" app:rv_cornerRadius_BR="8dp">
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" app:alignContent="2" app:alignItems="2" app:justifyContent="3">
+                        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textSize="12sp" android:textColor="?attr/colorFormTitle" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_chart_flu"/>
+                            <TextView android:textSize="12sp" android:gravity="center_horizontal" android:id="@+id/tvMaxWave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="--"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textSize="12sp" android:textColor="?attr/colorFormTitle" android:gravity="center_horizontal" android:id="@+id/tvMaxText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_chart_max"/>
+                            <TextView android:textSize="12sp" android:gravity="center_horizontal" android:id="@+id/tvMax" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="--"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textSize="12sp" android:textColor="?attr/colorFormTitle" android:gravity="center_horizontal" android:id="@+id/tvMinText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="@string/history_chart_min"/>
+                            <TextView android:textSize="12sp" android:gravity="center_horizontal" android:id="@+id/tvMin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="130dp" android:minWidth="100dp" android:text="--"/>
+                        </LinearLayout>
+                    </com.google.android.flexbox.FlexboxLayout>
+                </com.flyco.roundview.RoundFrameLayout>
+            </com.flyco.roundview.RoundLinearLayout>
+            <com.flyco.roundview.RoundLinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp" app:rv_backgroundColor="@color/bg_item_color" app:rv_cornerRadius="8dp">
+                <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:alignContent="2" app:justifyContent="3">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/history_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/history_percent_title"/>
+                    <FrameLayout android:id="@+id/flCollapse" android:layout_width="50dp" android:layout_height="20dp">
+                        <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/ivCollapse" android:layout_width="13dp" android:layout_height="wrap_content" android:src="@drawable/ic_collapse" android:adjustViewBounds="true"/>
+                    </FrameLayout>
+                </com.google.android.flexbox.FlexboxLayout>
+                <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" app:justifyContent="4">
+                    <com.microtech.aidexx.views.HollowPieChartView android:id="@+id/pvHigh" android:layout_width="60dp" android:layout_height="60dp" app:pieRadius="30dp" app:pieTextSize="12sp"/>
+                    <com.microtech.aidexx.views.HollowPieChartView android:id="@+id/pvNormal" android:layout_width="60dp" android:layout_height="60dp" app:pieRadius="30dp" app:pieTextSize="12sp"/>
+                    <com.microtech.aidexx.views.HollowPieChartView android:id="@+id/pvLow" android:layout_width="60dp" android:layout_height="60dp" app:pieRadius="30dp" app:pieTextSize="12sp"/>
+                </com.google.android.flexbox.FlexboxLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llPercentDetail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:alignContent="2" app:justifyContent="3">
+                        <TextView android:textSize="14sp" android:textColor="@color/history_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/history_percent_high_title"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/history_count_text" android:id="@+id/tvHighPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:alignContent="2" app:justifyContent="3">
+                        <TextView android:textSize="10sp" android:textColor="?attr/colorFormTitle" android:id="@+id/tvHighRange" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:textSize="10sp" android:textColor="?attr/colorFormTitle" android:id="@+id/tvHighGlucoseTime" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" app:alignContent="2" app:justifyContent="3">
+                        <TextView android:textSize="14sp" android:textColor="@color/history_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/history_percent_normal_title"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/history_count_text" android:id="@+id/tvNormalPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:alignContent="2" app:justifyContent="3">
+                        <TextView android:textSize="10sp" android:textColor="?attr/colorFormTitle" android:id="@+id/tvNormalRange" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:textSize="10sp" android:textColor="?attr/colorFormTitle" android:id="@+id/tvNormalGlucoseTime" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" app:alignContent="2" app:justifyContent="3">
+                        <TextView android:textSize="14sp" android:textColor="@color/history_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/history_percent_low_title"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/history_count_text" android:id="@+id/tvLowPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                    <com.google.android.flexbox.FlexboxLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:alignContent="2" app:justifyContent="3">
+                        <TextView android:textSize="10sp" android:textColor="?attr/colorFormTitle" android:id="@+id/tvLowRange" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:textSize="10sp" android:textColor="?attr/colorFormTitle" android:id="@+id/tvLowGlucoseTime" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </com.google.android.flexbox.FlexboxLayout>
+                </LinearLayout>
+            </com.flyco.roundview.RoundLinearLayout>
+            <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:rv_backgroundColor="@color/white" app:rv_cornerRadius="10dp">
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvHistoryDetail" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_marginBottom="30dp"/>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

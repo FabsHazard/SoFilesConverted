@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/layout_scan" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <View android:background="?attr/scanBg" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/ll_preview" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <LinearLayout android:id="@+id/ll_preview" android:layout_width="match_parent" android:layout_height="280dp" app:layout_constraintBottom_toTopOf="@+id/flash_switch" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_chainStyle="2">
+            <View android:background="?attr/scanBg" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <RelativeLayout android:gravity="center" android:layout_width="280dp" android:layout_height="280dp">
+                <View android:layout_width="280dp" android:layout_height="280dp"/>
+                <ImageView android:id="@+id/animation_line" android:layout_width="match_parent" android:layout_height="1dp" android:src="@drawable/shape_scan_line"/>
+            </RelativeLayout>
+            <View android:background="?attr/scanBg" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView android:textColor="?attr/textColorPrimary" android:gravity="center" android:id="@+id/tv_scan_tips" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:checked="false" android:button="@null" android:text="@string/scan_tip_userCenter" app:layout_constraintBottom_toTopOf="@+id/flash_switch" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/ll_preview"/>
+        <CheckBox android:gravity="center" android:id="@+id/flash_switch" android:background="@drawable/flash_switch_selector" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:checked="false" android:button="@null" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_scan_tips"/>
+        <View android:background="?attr/scanBg" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/ll_preview"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.microtech.aidexx.views.ActionBarWidget android:id="@+id/action_bar" android:background="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" app:leftIcon="@drawable/ic_back" app:titleText="@string/scan"/>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="62dp" android:width="377dp" android:viewportWidth="377" android:viewportHeight="62">
+    <path android:fillColor="#00000000" android:pathData="M1,21.5L376.25,21.5" android:strokeColor="?attr/outlineColor" android:strokeWidth="0.2" android:strokeLineCap="square" android:fillType="1"/>
+    <path android:fillColor="?attr/outlineColor" android:pathData="M159.05,31a29.51,30 0,1 0,59.02 0a29.51,30 0,1 0,-59.02 0z" android:strokeColor="?attr/outlineColor" android:strokeWidth="0.2" android:fillType="1"/>
+    <path android:fillColor="?attr/bgMainTab" android:pathData="M159.05,31a29.51,30 0,1 0,59.02 0a29.51,30 0,1 0,-59.02 0z" android:strokeColor="?attr/outlineColor" android:strokeWidth="0.2" android:fillType="1"/>
+    <path android:fillColor="?attr/bgMainTab" android:pathData="M188.56,61C204.86,61 218.07,47.57 218.07,31C218.37,28.72 217.94,25.79 216.78,22.23L160.29,22.23C159.26,25.84 158.85,28.76 159.05,31C159.05,47.57 172.26,61 188.56,61Z" android:strokeColor="?attr/bgMainTab" android:strokeWidth="0.2" android:fillType="1"/>
+</vector>

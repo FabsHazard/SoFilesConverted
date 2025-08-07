@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microtech.aidexx.views.ActionBarWidget android:id="@+id/action_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0" app:leftIcon="@drawable/ic_back" app:titleText="@string/appInfo"/>
+    <androidx.core.widget.NestedScrollView android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="20dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/action_bar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/appInfo_name"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoValue" android:id="@+id/softwareName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/appInfo_name_value" android:textAlignment="viewStart"/>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/appInfo_model"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoValue" android:id="@+id/softwareModel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/gpSoftWareModel" android:textAlignment="viewStart"/>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/appInfo_version"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoValue" android:id="@+id/softwareCompleteVersion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:textAlignment="viewStart"/>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/appInfo_releaseVersion"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoValue" android:id="@+id/softwareReleaseVersion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="V 1" android:textAlignment="viewStart"/>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoLabel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/appInfo_releaseDate"/>
+            <TextView android:textSize="16sp" android:textColor="@color/appInfoValue" android:id="@+id/softwareReleaseDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:textAlignment="viewStart"/>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="38dp" android:layout_height="24dp" android:src="0x7f080176" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <TextView android:textSize="14sp" android:textColor="@color/appInfoValue" android:id="@+id/udiTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" android:layout_marginStart="60dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="0x7f0800ea" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="60dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/appInfoValue" android:id="@+id/appInfoCompanyName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" android:lineHeight="22dp"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/appInfoValue" android:id="@+id/appInfoCompanyAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" android:lineHeight="22dp"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/appInfoLink" android:id="@+id/appInfoCompanyLink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/appInfo_company_url" android:textAlignment="viewStart" android:lineHeight="22dp"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="0px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="48dp" android:layout_height="16dp" android:src="0x7f0800f8" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="60dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/appInfoValue" android:id="@+id/appInfoProxyName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" android:lineHeight="22dp"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/appInfoValue" android:id="@+id/appInfoProxyInformation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" android:lineHeight="22dp"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="0x7f080106" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <TextView android:textSize="14sp" android:textColor="@color/appInfoValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/appInfo_usage" android:textAlignment="viewStart" android:layout_marginStart="60dp" android:lineHeight="22dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="0px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="0x7f0800e3" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <ImageView android:layout_width="38dp" android:layout_height="24dp" android:src="0x7f08012a" android:layout_marginStart="60dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="56dp" android:layout_height="42dp" android:src="0x7f08010e" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="60dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <TextView android:textSize="14sp" android:textColor="@color/appInfoValue" android:id="@+id/appInfoGuideLink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/appInfo_instructions" android:textAlignment="viewStart" android:lineHeight="22dp"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View android:background="@color/appInfoDivider" android:layout_width="match_parent" android:layout_height="0px" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

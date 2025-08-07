@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/main_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microtech.aidexx.views.ActionBarWidget android:id="@+id/action_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:leftIcon="@drawable/ic_back" app:titleText="@string/welcome_register"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <FrameLayout android:id="@+id/fl_bg" android:layout_width="match_parent" android:layout_height="150dp">
+                <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:background="@drawable/logo_login" android:layout_width="66dp" android:layout_height="45dp" android:layout_marginBottom="30dp"/>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp">
+                <androidx.appcompat.widget.AppCompatEditText android:id="@+id/et_username" android:background="@color/main_bg" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:hint="@string/user_email" android:singleLine="true" android:drawablePadding="10dp" android:drawableStart="@drawable/ic_fun_5" style="@style/MyEditText"/>
+                <include layout="@layout/layout_line"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatEditText android:id="@+id/et_code" android:background="@color/main_bg" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/user_getCode" android:drawablePadding="10dp" android:layout_weight="2" android:inputType="number" android:drawableStart="@drawable/ic_ver_code" style="@style/MyEditText"/>
+                    <TextView android:id="@+id/btn_get_code" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/user_sign_getCode" android:layout_weight="1" style="@style/btnLogin"/>
+                </LinearLayout>
+                <include layout="@layout/layout_line"/>
+                <androidx.appcompat.widget.AppCompatEditText android:id="@+id/et_pwd" android:background="@color/main_bg" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/user_pwd" android:singleLine="true" android:drawablePadding="10dp" android:inputType="textPassword" android:drawableStart="@drawable/ic_fun_6" style="@style/MyEditText"/>
+                <include layout="@layout/layout_line"/>
+                <androidx.appcompat.widget.AppCompatEditText android:id="@+id/et_pwd_confirm" android:background="@color/main_bg" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/user_repwd" android:singleLine="true" android:drawablePadding="10dp" android:inputType="textPassword" android:drawableStart="@drawable/ic_fun_6" style="@style/MyEditText"/>
+                <include layout="@layout/layout_line"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="11dp">
+                <CheckBox android:theme="@style/LoginCheckBox" android:id="@+id/check_protocal" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.AppCompat.CompoundButton.RadioButton"/>
+                <TextView android:textSize="11sp" android:id="@+id/txt_user_protocal" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <com.microtech.aidexx.views.button.StateButton android:id="@+id/button_regist" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="20dp" android:text="@string/welcome_register" style="@style/StateButtonRaised"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

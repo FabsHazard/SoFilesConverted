@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="?attr/windowBackground" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+            <ImageView android:id="@+id/ivBack" android:layout_width="?attr/actionBarIconSize" android:layout_height="?attr/actionBarIconSize" android:src="@drawable/ic_back" android:adjustViewBounds="true" android:layout_centerVertical="true" android:layout_marginStart="6dp" app:layout_constraintBottom_toBottomOf="@+id/tvTitle" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/tvTitle"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/glucose_item_history" android:layout_centerInParent="true" app:emojiCompatEnabled="false" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/rl_date_space" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="10dp">
+            <TextView android:textSize="18sp" android:textColor="?attr/appColorAccent" android:gravity="center" android:id="@+id/time_begin" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" app:emojiCompatEnabled="false"/>
+            <TextView android:textSize="18sp" android:textColor="?attr/appColorAccent" android:id="@+id/time_separate" android:padding="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/time_divider" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" app:emojiCompatEnabled="false"/>
+            <TextView android:textSize="18sp" android:textColor="?attr/appColorAccent" android:gravity="center" android:id="@+id/time_end" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" app:emojiCompatEnabled="false"/>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_date_arrow" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="?attr/colorSeparate" android:layout_width="match_parent" android:layout_height="10dp"/>
+    <RelativeLayout android:background="?attr/colorSeparate" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_history_content" android:background="?attr/bgSetting" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:paddingStart="20dp" android:paddingEnd="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16sp" android:textColor="?attr/colorFormTitle" android:gravity="start" android:id="@+id/tvGlucoseTimeText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/glucose_item_time" android:layout_weight="1" app:emojiCompatEnabled="false"/>
+                <TextView android:textSize="16sp" android:textColor="?attr/colorFormTitle" android:gravity="end" android:layout_width="0dp" android:layout_height="wrap_content" android:minWidth="80dp" android:text="@string/glucose_item_value" android:layout_weight="1" app:emojiCompatEnabled="false"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvGlucoseHistory" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:background="?attr/bgMainTab" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="22dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toTopOf="0">
+        <include android:id="@+id/tab_history" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" layout="@layout/main_tab_item"/>
+        <include android:id="@+id/tab_trend" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" layout="@layout/main_tab_item"/>
+        <View android:id="@+id/tab_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.3"/>
+        <include android:id="@+id/tab_bg" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" layout="@layout/main_tab_item"/>
+        <include android:id="@+id/tab_event" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" layout="@layout/main_tab_item"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <RelativeLayout android:background="@drawable/bg_main_tab_circle" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <RelativeLayout android:orientation="vertical" android:id="@+id/tab_home" android:layout_width="58dp" android:layout_height="58dp" android:layout_centerHorizontal="true">
+            <ImageView android:id="@+id/iv_home" android:layout_width="42dp" android:layout_height="42dp" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:textSize="12sp" android:id="@+id/tv_home" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="55dp" app:emojiCompatEnabled="false" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

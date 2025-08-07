@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/ll_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14sp" android:id="@+id/tv_glucose_time" android:layout_width="wrap_content" android:layout_height="wrap_content" app:emojiCompatEnabled="false"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <TextView android:textSize="14sp" android:id="@+id/tv_glucose_describe" android:layout_width="wrap_content" android:layout_height="wrap_content" app:emojiCompatEnabled="false" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textSize="14sp" android:gravity="start" android:id="@+id/tv_glucose_record_value" android:layout_width="wrap_content" android:layout_height="wrap_content" app:emojiCompatEnabled="false" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View android:id="@+id/glucose_history_divider" android:background="?attr/dividerLine" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="10dp" android:layout_marginBottom="16dp"/>
+</LinearLayout>

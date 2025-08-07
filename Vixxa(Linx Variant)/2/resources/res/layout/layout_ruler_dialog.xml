@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="bottom" android:orientation="vertical" android:background="?attr/bgMainTab" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp">
+        <TextView android:gravity="center" android:id="@+id/bt_cancel" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/com_action_cancel" android:layout_marginStart="13dp" app:emojiCompatEnabled="false" style="@style/btnDialog"/>
+        <Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <TextView android:gravity="center" android:id="@+id/bt_ok" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/com_action_sure" android:layout_marginEnd="13dp" app:emojiCompatEnabled="false" style="@style/btnDialog"/>
+    </LinearLayout>
+    <com.microtech.aidexx.views.ruler.RulerWidget android:id="@+id/rw_number" android:background="?attr/colorDialog" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Space android:layout_width="match_parent" android:layout_height="50dp"/>
+</LinearLayout>

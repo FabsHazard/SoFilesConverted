@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/layout_line"/>
+    <androidx.appcompat.widget.AppCompatEditText android:textSize="16sp" android:id="@+id/et_pwd" android:background="?attr/bgColor" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/user_pwd" android:singleLine="true" android:drawablePadding="10dp" android:inputType="textPassword" android:drawableStart="@drawable/ic_pwd" style="@style/MyEditText"/>
+    <include layout="@layout/layout_line"/>
+    <com.google.android.flexbox.FlexboxLayout android:gravity="center_vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:alignItems="2" app:flexDirection="0" app:flexWrap="1" app:justifyContent="3">
+        <TextView android:textSize="14sp" android:textColor="?attr/colorDesc" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_sign_tip2" app:emojiCompatEnabled="false"/>
+        <TextView android:textSize="14sp" android:textColor="?attr/appColorAccent" android:gravity="center" android:id="@+id/tv_forget" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_sign_forgetPwd" app:emojiCompatEnabled="false"/>
+    </com.google.android.flexbox.FlexboxLayout>
+</LinearLayout>

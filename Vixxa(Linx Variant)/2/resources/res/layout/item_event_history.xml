@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@+id/llTimeline" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_marginTop="2dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textColor="@color/history_time" android:id="@+id/tvTimeLine" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <com.microtech.aidexx.views.DashView android:textColor="@color/history_time_line" android:layout_width="2dp" android:layout_height="0dp" android:layout_marginTop="10dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tvTimeLine"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.microtech.aidexx.views.SwipeDeleteMenuLayout android:orientation="horizontal" android:id="@+id/sml_delete" android:focusable="true" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="20dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/llTimeline" app:layout_constraintTop_toTopOf="0" app:leftSwipe="true" app:swipeEnable="true">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.flyco.roundview.RoundLinearLayout android:orientation="vertical" android:id="@+id/flItemHeightGuide" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" app:rv_backgroundColor="@color/bg_item_color" app:rv_cornerRadius="10dp">
+                <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="27dp" android:layout_marginBottom="10dp" android:layout_marginStart="10dp">
+                    <TextView android:textColor="@color/history_count_text" android:id="@+id/tvDetail" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" android:layout_marginEnd="8dp"/>
+                    <FrameLayout android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/flCollapse" android:paddingTop="10dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="30dp" android:paddingEnd="8dp">
+                        <ImageView android:id="@+id/ivCollapse" android:layout_width="13dp" android:layout_height="wrap_content" android:src="@drawable/ic_collapse" android:adjustViewBounds="true"/>
+                    </FrameLayout>
+                </FrameLayout>
+                <TextView android:textColor="@color/history_label" android:id="@+id/tvContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:includeFontPadding="false" android:lineSpacingExtra="10dp" android:layout_marginStart="10dp"/>
+            </com.flyco.roundview.RoundLinearLayout>
+            <com.lihang.ShadowLayout android:layout_width="35dp" android:layout_height="35dp" android:layout_marginStart="5dp" app:hl_cornerRadius="50dp" app:hl_layoutBackground="@color/history_bg_icon" app:hl_shadowColor="#ff555555" app:hl_shadowLimit="5dp">
+                <ImageView android:layout_gravity="center" android:id="@+id/ivHistory" android:layout_width="12dp" android:layout_height="wrap_content" android:adjustViewBounds="true"/>
+            </com.lihang.ShadowLayout>
+        </FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/flHistoryDelete" android:paddingTop="15dp" android:layout_width="60dp" android:layout_height="match_parent">
+            <ImageButton android:id="@+id/tvHistoryDelete" android:clickable="false" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_delete_swip" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.microtech.aidexx.views.SwipeDeleteMenuLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

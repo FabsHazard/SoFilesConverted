@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:ordering="together">
+    <objectAnimator android:duration="1000" android:valueFrom="M46,205.5 A1,1 0 0,0 46,206.5 M46,205.5 L47,205.5 A1,1 0 0,1 47,206.5 L47,206.5 L46,206.5 Z" android:valueTo="M46,205.5 A1,1 0 0,0 46,206.5 M46,205.5 L242,205.5 A1,1 0 0,1 242,206.5 L242,206.5 L46,206.5 Z" android:valueType="pathType" android:propertyName="pathData"/>
+</set>

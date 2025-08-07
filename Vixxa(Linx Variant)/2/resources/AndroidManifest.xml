@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1710" android:versionName="1.7.1" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" android:requiredSplitTypes="base__abi,base__density" android:splitTypes="" package="com.microtech.aidexx.grx1.mmoll" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="10000"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <queries>
+        <intent>
+            <action android:name="com.getui.sdk.action"/>
+        </intent>
+        <package android:name="com.huawei.hff"/>
+        <package android:name="com.huawei.hms"/>
+        <package android:name="com.huawei.hwid"/>
+        <package android:name="com.huawei.hwid.tv"/>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <permission android:name="com.microtech.aidexx.grx1.mmoll.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.microtech.aidexx.grx1.mmoll.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="getui.permission.GetuiService.com.microtech.aidexx.grx1.mmoll"/>
+    <permission android:name="getui.permission.GetuiService.com.microtech.aidexx.grx1.mmoll" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <application android:theme="@style/AppThemeLight" android:label="@string/app_name" android:icon="@mipmap/ic_home_launcher" android:name="com.microtech.aidexx.AidexxApp" android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:allowBackup="true" android:installLocation="internalOnly" android:supportsRtl="true" android:extractNativeLibs="false" android:fullBackupContent="@xml/backup_rules" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true" android:dataExtractionRules="@xml/data_extraction_rules">
+        <activity android:name="com.microtech.aidexx.ui.setting.AppInfoActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|screenSize"/>
+        <activity android:name="com.microtech.aidexx.ui.account.RegisterActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|screenSize" android:windowSoftInputMode="adjustPan"/>
+        <service android:name="com.microtech.aidexx.service.DataService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.metadata.ModuleDependencies" android:enabled="false" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES"/>
+            </intent-filter>
+            <meta-data android:name="photopicker_activity:0:required" android:value=""/>
+        </service>
+        <activity android:name="com.microtech.aidexx.ui.setting.timezonehistory.TimezoneHistoryActivity" android:exported="false"/>
+        <activity android:name="com.microtech.aidexx.ui.main.trend.PdfActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.welcome.guide.GuidanceActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.qrcode.QrCodeScanActivity" android:exported="false"/>
+        <activity android:name="com.microtech.aidexx.ui.pair.PairedHistoryActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.microtech.aidexx.grx1.mmoll.androidx-startup"/>
+        <receiver android:name="com.microtech.aidexx.service.BootReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.REBOOT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.microtech.aidexx.ui.setting.AccountSecurityActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.alert.AlertSettingsActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.SettingActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.pair.TransOperationActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.pair.TransmitterActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.microtech.aidexx.ui.account.LoginActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.SplashScreen.Aidex" android:name="com.microtech.aidexx.ui.welcome.WelcomeActivity" android:exported="true" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.microtech.aidexx.ui.main.MainActivity" android:exported="true" android:screenOrientation="portrait" android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="microtech" android:host="com.microtech.aidexx" android:path="/main"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.microtech.aidexx.ui.web.WebActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.AboutActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.account.ForgetPwdActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.share.ShareFollowActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.share.ShareAddUserActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.share.ShareAddUserByWechatActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.share.ShareAndFollowEditActivity" android:exported="false" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.microtech.aidexx.ui.main.bg.history.BloodGlucoseHistoryActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.main.home.followers.FollowSwitchActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.profile.ProfileSettingsActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.profile.EditNameActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:name="com.microtech.aidexx.ui.setting.permission.PermissionCheckActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.microtech.aidexx.ui.account.DirectLoginActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|screenSize"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.profile.health.DiabetesInfoConfigActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|screenSize"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.profile.health.OtherDiseaseActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|screenSize"/>
+        <activity android:name="com.microtech.aidexx.ui.setting.profile.ChangeAccountActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|screenSize"/>
+        <service android:name="com.microtech.aidexx.service.MainService" android:permission="aidex-main-service" android:enabled="true" android:exported="true" android:stopWithTask="false" android:foregroundServiceType="10"/>
+        <service android:label="PushService" android:name="com.microtech.aidexx.service.push.AidexPushService" android:exported="false" android:process=":pushservice"/>
+        <service android:name="com.microtech.aidexx.service.push.GeTuiIntentService"/>
+        <provider android:name="com.microtech.aidexx.views.CgmFileProvider" android:exported="false" android:authorities="com.microtech.aidexx.grx1.mmoll.FileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths_public"/>
+        </provider>
+        <receiver android:name="com.microtech.aidexx.service.TimeChangeReceiver" android:exported="false"/>
+        <receiver android:name="com.microtech.aidexx.ui.widget.AidexWidgetProvider" android:permission="com.microtechmd.cgms.permission.WIDGET_UPDATE" android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/aidex_widget_info"/>
+        </receiver>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <receiver android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="PUSH_APPID" android:value="7aeutZZtwM7kyuGL0PS976"/>
+        <service android:label="NotificationCenter" android:name="com.igexin.sdk.PushService" android:exported="false" android:process=":pushservice"/>
+        <service android:name="com.igexin.sdk.GTIntentService" android:exported="false"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.igexin.sdk.PushActivity" android:exported="false" android:process=":pushservice"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.igexin.sdk.GetuiActivity" android:process=":pushservice"/>
+        <meta-data android:name="huawei_module_scankit_local" android:value="21100300"/>
+        <meta-data android:name="huawei_module_scankit_sdk_version" android:value="scanplus:2.11.0.300"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:scanplus" android:value="scanplus:2.11.0.300"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:scanplus:huawei_module_scankit" android:value="1"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:scanplus:hmscore" android:value="1"/>
+        <activity android:name="com.huawei.hms.hmsscankit.ScanKitActivity" android:launchMode="singleTask"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:dynamic-api" android:value="dynamic-api:1.0.24.300"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:dynamic-api:huawei_module_dynamicloader" android:value="10"/>
+        <provider android:name="com.huawei.hms.mlsdk.common.provider.MLInitializerProvider" android:exported="false" android:authorities="com.microtech.aidexx.grx1.mmoll.MLInitializerProvider"/>
+        <provider android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" android:exported="false" android:authorities="com.microtech.aidexx.grx1.mmoll.AGCInitializeProvider"/>
+        <service android:name="com.huawei.agconnect.core.ServiceDiscovery" android:exported="false"/>
+        <activity android:name="com.pairip.licensecheck.LicenseActivity" android:exported="false"/>
+        <provider android:name="com.pairip.licensecheck.LicenseContentProvider" android:exported="false" android:authorities="com.microtech.aidexx.grx1.mmoll.com.pairip.licensecheck.LicenseContentProvider"/>
+        <provider android:name="com.pairip.licensecheck.LicenseContentProvider1" android:exported="false" android:process=":pushservice" android:authorities="com.microtech.aidexx.grx1.mmoll.com.pairip.licensecheck.LicenseContentProvider1"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+</manifest>

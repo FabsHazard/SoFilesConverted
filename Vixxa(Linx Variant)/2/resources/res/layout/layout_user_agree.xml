@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@color/grayc" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_dialog" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/dialogMargin">
+        <TextView android:textSize="16sp" android:textStyle="bold" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="10dp" android:text="@string/user_sign_serviceAndPrivatePolicy" android:textAlignment="center" app:emojiCompatEnabled="false"/>
+        <TextView android:id="@+id/tv_content" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="240dp" android:minHeight="240dp" android:minLines="9" android:lineSpacingExtra="2dp" app:emojiCompatEnabled="false"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+            <TextView android:gravity="center" android:id="@+id/bt_cancel" android:padding="12dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="@string/com_disagree" android:layout_weight="1" app:emojiCompatEnabled="false" style="@style/btnDialog"/>
+            <TextView android:gravity="center" android:id="@+id/bt_ok" android:padding="12dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="@string/com_agree" android:layout_weight="1" app:emojiCompatEnabled="false" style="@style/btnDialog"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

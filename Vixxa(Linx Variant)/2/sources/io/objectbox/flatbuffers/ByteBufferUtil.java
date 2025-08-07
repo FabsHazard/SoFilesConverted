@@ -1,0 +1,15 @@
+package io.objectbox.flatbuffers;
+
+import java.nio.ByteBuffer;
+
+public class ByteBufferUtil {
+    public static int getSizePrefix(ByteBuffer byteBuffer) {
+        return byteBuffer.getInt(byteBuffer.position());
+    }
+
+    public static ByteBuffer removeSizePrefix(ByteBuffer byteBuffer) {
+        ByteBuffer duplicate = byteBuffer.duplicate();
+        duplicate.position(duplicate.position() + 4);
+        return duplicate;
+    }
+}

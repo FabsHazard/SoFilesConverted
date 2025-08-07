@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.microtech.aidexx.views.ActionBarWidget android:id="@+id/action_bar" android:layout_width="match_parent" android:layout_height="wrap_content" app:leftIcon="@drawable/ic_back" app:titleText="@string/user_warning"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="?attr/settingItemValueTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_warning_section_normal" android:layout_marginStart="20dp" app:emojiCompatEnabled="false"/>
+            <LinearLayout android:orientation="vertical" android:background="?attr/bgSetting" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:paddingStart="8dp" android:paddingEnd="8dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <Space android:layout_width="match_parent" android:layout_height="6dp"/>
+                <TextView android:textSize="?attr/settingItemTitleTextSize" android:textStyle="bold" android:textColor="?attr/settingItemTitleTextColor" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_warning_normal_mode" android:layout_marginStart="10dp" app:emojiCompatEnabled="false"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/notice_method" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="true" app:has_next="true" app:title="@string/user_warning_mode_title"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/notice_frequency" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="true" app:has_next="true" app:title="@string/user_warning_frequence_title"/>
+                <TextView android:textSize="?attr/settingItemTitleTextSize" android:textStyle="bold" android:textColor="?attr/settingItemTitleTextColor" android:paddingTop="12dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_warning_normal_content" android:layout_marginStart="10dp" app:emojiCompatEnabled="false"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/hypo_alert_switch" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_switch="true" app:title="@string/user_warning_low_switch"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/hypo_threshold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_warning_low_value"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/hyper_alert_switch" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_switch="true" app:title="@string/user_warning_high_switch"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/hyper_threshold" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_warning_high_value"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/switch_raise_alert" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_switch="true" app:title="@string/user_warning_riseQuick_switch"/>
+                <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/switch_fall_alert" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="false" app:has_next="false" app:has_switch="true" app:title="@string/user_warning_fallQuick_switch"/>
+                <Space android:layout_width="match_parent" android:layout_height="6dp"/>
+            </LinearLayout>
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="?attr/settingItemValueTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/user_warning_section_urgent" android:layout_marginStart="20dp" app:emojiCompatEnabled="false"/>
+            <LinearLayout android:orientation="vertical" android:background="?attr/bgSetting" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:paddingStart="8dp" android:paddingEnd="8dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <Space android:layout_width="match_parent" android:layout_height="6dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/switch_urgent_alert" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_switch="true" app:title="@string/user_warning_urgentLow_switch"/>
+                    <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/low_urgent_value" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_next="true" app:title="@string/user_warning_urgentLow_value"/>
+                    <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/notice_method_urgent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="true" app:has_next="true" app:title="@string/user_warning_mode_title"/>
+                    <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/notice_frequency_urgent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="false" app:has_next="true" app:title="@string/user_warning_frequence_title"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="6dp"/>
+            </LinearLayout>
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="?attr/settingItemValueTextColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/user_warning_section_system" android:layout_marginStart="20dp" app:emojiCompatEnabled="false"/>
+            <LinearLayout android:orientation="vertical" android:background="?attr/bgSetting" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <Space android:layout_width="match_parent" android:layout_height="6dp"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="8dp" android:paddingEnd="8dp">
+                    <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/switch_signal_loss" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="true" app:has_switch="true" app:title="@string/user_warning_signalLost_switch"/>
+                    <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/notice_method_signal_loss" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="true" app:has_next="true" app:title="@string/user_warning_mode_title"/>
+                    <com.microtech.aidexx.views.SettingItemWidget android:id="@+id/notice_frequency_signal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" app:has_line="false" app:has_next="true" app:title="@string/user_warning_frequence_title"/>
+                </LinearLayout>
+                <Space android:layout_width="match_parent" android:layout_height="6dp"/>
+            </LinearLayout>
+            <Space android:layout_width="match_parent" android:layout_height="60dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
